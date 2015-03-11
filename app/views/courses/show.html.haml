@@ -4,11 +4,16 @@
   %b Coursename:
   = @course.coursename
 %p
-  %b Course:
-  = @course.course_id
+  %b Coursenumber:
+  = @course.course_number
 %p
-  %b Coursesection:
-  = @course.coursesection
+  - @booksforcourses.each do |booksforcourse|
+    %b Bookused:
+    = booksforcourse.book_Name
+%p
+  - @booksforcourses.each do |booksforcourse|
+    %b Authname:
+    = booksforcourse.authName
 
 = link_to 'Edit', edit_course_path(@course)
 \|

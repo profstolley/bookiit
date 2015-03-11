@@ -1,15 +1,14 @@
-%h1 Listing books
+%h1.headerone Listing books
 
 %table
   %thead
     %tr
       %th Isbn
       %th Bookname
-      %th Authname
       %th Bookedition
       %th Bookyear
       %th Bookaction
-      %th
+      %th.detailslink
       %th
       %th
 
@@ -18,14 +17,20 @@
       %tr
         %td= book.isbn
         %td= book.book_Name
-        %td= book.authName
         %td= book.bookEdition
         %td= book.bookYear
         %td= book.bookAction
-        %td= link_to 'Show', book
-        %td= link_to 'Edit', edit_book_path(book)
-        %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td.detailslink= link_to 'Details', book
+        %td= link_to 'Delete', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
+%br
+
+=form_tag({controller: "books", action: "searchbook"}, :method => :get) do
+  .search_field
+    %p
+      Search Using ISBN:
+    =text_field_tag :q
+    =button_tag 'Go' , class: 'search-button' , type: :submit
 %br
 
 = link_to 'New Book', new_book_path

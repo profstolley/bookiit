@@ -1,0 +1,25 @@
+%h1 Book you are looking for is
+
+%p
+  %b Isbn:
+  = @searchedbook.isbn
+%p
+  %b Bookname:
+  = @searchedbook.book_Name
+%p
+  %b Authname:
+  = @searchedbook.authName
+%p
+  %b Bookedition:
+  = @searchedbook.bookEdition
+%p
+  %b Bookyear:
+  = @searchedbook.bookYear
+%p
+  %b Bookaction:
+  = @searchedbook.bookAction
+%p
+  %b Coursenumber:
+  = @searchedbook.course_number
+
+= link_to 'Back', books_path

@@ -45,3 +45,8 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  # Some fancypants stuff for rails console
+  gem 'brice'
+  gem 'hirb'
+end

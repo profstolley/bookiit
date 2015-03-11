@@ -4,17 +4,17 @@
   %thead
     %tr
       %th Coursename
-      %th Course
+      %th Coursenumber
       %th Coursesection
       %th
       %th
       %th
-      
+
   %tbody
     - @courses.each do |course|
       %tr
         %td= course.coursename
-        %td= course.course_id
+        %td= course.course_number
         %td= course.coursesection
         %td= link_to 'Show', course
         %td= link_to 'Edit', edit_course_path(course)

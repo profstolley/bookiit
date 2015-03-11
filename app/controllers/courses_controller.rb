@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @booksforcourses = Book.where(course_number: @course.course_number)
   end
 
   # GET /courses/new
@@ -69,6 +70,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:coursename, :course_id, :coursesection)
+      params.require(:course).permit(:coursename, :course_number, :coursesection)
     end
 end

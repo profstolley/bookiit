@@ -18,7 +18,9 @@
 %p
   %b Bookaction:
   = @book.bookAction
-
+%p
+  %b Coursenumber:
+  = @book.course_number
 = link_to 'Edit', edit_book_path(@book)
 \|
 = link_to 'Back', books_path

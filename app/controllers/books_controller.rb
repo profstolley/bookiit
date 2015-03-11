@@ -12,6 +12,10 @@ class BooksController < ApplicationController
   def show
   end
 
+  def searchbook
+    @searchedbook = Book.find_by_isbn(params[:q])
+  end
+
   # GET /books/new
   def new
     @book = Book.new
@@ -69,6 +73,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:isbn, :book_Name, :authName, :bookEdition, :bookYear, :bookAction)
+      params.require(:book).permit(:isbn, :book_Name, :authName, :bookEdition, :bookYear, :bookAction, :course_number)
     end
 end

@@ -1,3 +1,23 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.headerone {
+  color:red;
+  text-align:center;
+
+}
+
+th.detailslink {
+  width:8em;
+}
+
+td {
+  text-align:center;
+}
+
+td.a.verybad {
+  color:red;
+}
+
+
