@@ -20,8 +20,8 @@
         %td= book.bookEdition
         %td= book.bookYear
         %td= book.bookAction
-        %td.detailslink= link_to 'Details', book
-        %td= link_to 'Delete', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td.detailslink= button_to "Details", book, :method => "get"
+        %td= button_to "Delete", book, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
@@ -33,4 +33,4 @@
     =button_tag 'Go' , class: 'search-button' , type: :submit
 %br
 
-= link_to 'New Book', new_book_path
+= button_to "New Book", new_book_path, :method => 'get'

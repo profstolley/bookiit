@@ -5,12 +5,22 @@
 h1.headerone {
   color:red;
   text-align:center;
-
 }
 
-th.detailslink {
+.detailslink {
   width:8em;
 }
+/*
+.detailslink:hover {
+  width:8em;
+  &:hover {
+    color:blue;
+  }
+  &:visited {
+    color:red;
+  }
+}
+*/
 
 td {
   text-align:center;
